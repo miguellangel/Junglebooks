@@ -2,9 +2,8 @@
 	background-color: black !important;
 	z-index: 1;
 }
-
-a {
-	color: white !important;
+nav a {
+    color: white;
 }
 
 body {
@@ -30,4 +29,26 @@ body {
 .book-card:hover {
 	box-shadow: 0px 0px 0px;
 	cursor: pointer
+}
+
+#book-row-container {
+    height: 680px;
+}
+
+.row_div {
+    background-color: white;
+    margin: 10px;
+}
+
+.wrapper {
+    width: 99%;
+}
+
+.rel-books-wrapper {
+    background-color: #F2F2F2;
+    
+}
+
+.book-image {
+    width: 100%
 }
