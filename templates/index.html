@@ -26,10 +26,10 @@
 					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
+					<a class="nav-link" href="{{url_for('about')}}">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Statistics</a>
+					<a class="nav-link" href="{{url_for('statistics')}}">Statistics</a>
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
@@ -43,7 +43,7 @@
 		<div class="row" style="margin-top: 10px; height: 550px; border-radius: 10px; text-align-last: center">
 			<div class="col-md-4">
 				<div class="book-card">
-					<a href= "#" style="display: inline">
+					<a href= "{{url_for('book1')}}" style="display: inline">
 						<div class="img_placeholder">
 							<img class="img-reponsive" src="https://books.google.com/books/content/images/frontcover/wrOQLV6xB-wC?fife=w500">
 						</div>
@@ -52,16 +52,18 @@
 			</div>
 			<div class="col-md-4">
 				<div class="book-card">
-					<div class="img_placeholder">
-						<img class="img-reponsive" src="https://books.google.com/books/content/images/frontcover/L0hFAwAAQBAJ?fife=w500">
-					</div>
+					<a href= "{{url_for('book2')}}" style="display: inline">
+						<div class="img_placeholder">
+							<img class="img-reponsive" src="https://books.google.com/books/content/images/frontcover/L0hFAwAAQBAJ?fife=w500">
+						</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="book-card">
-					<div class="img_placeholder">
-						<img class="img-reponsive" src="https://books.google.com/books/content/images/frontcover/aWZzLPhY4o0C?fife=w500">
-					</div>
+					<a href= "{{url_for('book3')}}" style="display: inline">
+						<div class="img_placeholder">
+							<img class="img-reponsive" src="https://books.google.com/books/content/images/frontcover/aWZzLPhY4o0C?fife=w500">
+						</div>
 				</div>
 			</div>
 		</div>
