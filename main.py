@@ -43,7 +43,18 @@ def bsanderson():
 @app.route('/book3/author')
 def jrrtolkein():
 	return render_template("jrrtolkein.html")
+	
+@app.route('/book1/publisher')
+def pottermore():
+	return render_template("Pottermore.html")
 
+@app.route('/book2/publisher')
+def pmacmillan():
+	return render_template("PMacmillan.html")
+	
+@app.route('/book3/publisher')
+def hmharcourt():
+	return render_template("HMHarcourt.html")
 if __name__ == "__main__":
     app.run()
 #----------------------------------------
