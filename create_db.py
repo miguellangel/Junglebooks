@@ -57,7 +57,7 @@ def create_authors():
     book = load_json('books.json')
 
     for oneBook in book['Books']:
-        oneAuthor = oneBook['auhtors'][0]
+        oneAuthor = oneBook['authors'][0]
         name = oneAuthor['name']
         born = oneAuthor['born']
         education = oneAuhtor['education']
