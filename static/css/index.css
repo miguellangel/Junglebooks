@@ -3,22 +3,26 @@
 	z-index: 1;
 }
 nav a {
-    color: white;
+	color: white;
 }
-
 body {
 	background-color: #F2F2F2
 }
-.img_placeholder {
-	height: 85%;
+
+img {
+	width: 100%;
+}
+.row_div {
+    background-color: white;
+    margin: 10px;
+}
+.wrapper {
+    width: 100%;
 }
 
-.img_placeholder > img {
-	width: 90%;
-	height: 100%;
-
+#book-row-container {
+    height: 680px;
 }
-
 .book-card {
 	background-color: white;
 	border-radius: 10px;
@@ -31,24 +35,16 @@ body {
 	cursor: pointer
 }
 
-#book-row-container {
-    height: 680px;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-.row_div {
-    background-color: white;
-    margin: 10px;
-}
 
-.wrapper {
-    width: 99%;
-}
 
 .rel-books-wrapper {
-    background-color: #F2F2F2;
-    
-}
-
-.book-image {
-    width: 100%
+	background-color: #F2F2F2;
+	padding: 10px;
+	border-radius: 30px;
 }

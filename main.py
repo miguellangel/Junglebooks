@@ -11,12 +11,62 @@ books = [{'title': 'Software Engineering', 'id': '1'},  \
 
 @app.route('/')
 def index():
+<<<<<<< HEAD
     return render_template('hello.html')
 
 @app.route('/book2/')
 def book():
     return render_template('book2.html', books = books)
+=======
+	return render_template("index.html")
+@app.route('/about')
+def about():
+	return render_template("about.html")
+>>>>>>> 002465a5e474e04723c3bcdfc6cf6ef30bc90c59
 
+@app.route('/statistics')
+def statistics():
+	return render_template("statistics.html")
+
+@app.route('/book1')
+def book1():
+	return render_template("book_1.html")
+	
+@app.route('/book2')
+def book2():
+	return render_template("book_2.html")
+	
+@app.route('/book3')
+def book3():
+	return render_template("book_3.html")
+	
+@app.route('/book1/author')
+def jkrowling():
+	return render_template("jkrowling.html")
+
+@app.route('/book2/author1')
+def rjordan():
+	return render_template("rjordan.html")
+
+@app.route('/book2/author2')
+def bsanderson():
+	return render_template("bsanderson.html")
+
+@app.route('/book3/author')
+def jrrtolkein():
+	return render_template("jrrtolkein.html")
+	
+@app.route('/book1/publisher')
+def pottermore():
+	return render_template("Pottermore.html")
+
+@app.route('/book2/publisher')
+def pmacmillan():
+	return render_template("PMacmillan.html")
+	
+@app.route('/book3/publisher')
+def hmharcourt():
+	return render_template("HMHarcourt.html")
 if __name__ == "__main__":
     app.run()
 
