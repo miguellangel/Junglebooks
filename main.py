@@ -11,18 +11,15 @@ books = [{'title': 'Software Engineering', 'id': '1'},  \
 
 @app.route('/')
 def index():
-<<<<<<< HEAD
-    return render_template('hello.html')
+    return render_template('index.html')
 
 @app.route('/book2/')
 def book():
     return render_template('book2.html', books = books)
-=======
-	return render_template("index.html")
+
 @app.route('/about')
 def about():
 	return render_template("about.html")
->>>>>>> 002465a5e474e04723c3bcdfc6cf6ef30bc90c59
 
 @app.route('/statistics')
 def statistics():
