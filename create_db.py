@@ -50,7 +50,7 @@ def create_pub():
         # After I create the publisher, I can then add it to my session
         db.session.add(newPub)
         # commit the session to my DB
-        de.session.commit()
+        db.session.commit()
 
 # create and format the author data
 def create_authors():
