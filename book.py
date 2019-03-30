@@ -1,6 +1,6 @@
 # begin of book.py
 import json
-sample = {
+sample = {'Books':[{
         "google_id": "wrOQLV6xB-wC",
         "title": "Harry Potter and the Sorcerer's Stone",
         "isbn": "9781781100486",
@@ -29,7 +29,7 @@ sample = {
                 "image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/220px-J._K._Rowling_2010.jpg"
             }
         ]
-    }
+    }]}
 
 with open('books.json', 'w') as fp:
     json.dump(sample, fp, indent=4)

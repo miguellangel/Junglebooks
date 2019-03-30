@@ -24,7 +24,7 @@ def create_books():
         description = oneBook['description']
 
         # create a new book object utilizing the formatted data
-        newBook = Book(title = title, google_id = google_id, ibsn = ibsn, date = date, image = image, description = description)
+        newBook = Book(title = title, google_id = google_id, isbn = isbn, date = date, image = image, description = description)
         
         # After I create the book, I can then add it to my session. 
         db.session.add(newBook)
