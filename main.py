@@ -11,11 +11,7 @@ books = [{'title': 'Software Engineering', 'id': '1'},  \
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-
-@app.route('/book2/')
-def book():
-    return render_template('book2.html', books = books)
+    return render_template("index.html")
 
 @app.route('/about')
 def about():
@@ -28,15 +24,15 @@ def statistics():
 @app.route('/book1')
 def book1():
 	return render_template("book_1.html")
-	
+
 @app.route('/book2')
 def book2():
 	return render_template("book_2.html")
-	
+
 @app.route('/book3')
 def book3():
 	return render_template("book_3.html")
-	
+
 @app.route('/book1/author')
 def jkrowling():
 	return render_template("jkrowling.html")
@@ -52,7 +48,7 @@ def bsanderson():
 @app.route('/book3/author')
 def jrrtolkein():
 	return render_template("jrrtolkein.html")
-	
+
 @app.route('/book1/publisher')
 def pottermore():
 	return render_template("Pottermore.html")
@@ -60,7 +56,7 @@ def pottermore():
 @app.route('/book2/publisher')
 def pmacmillan():
 	return render_template("PMacmillan.html")
-	
+
 @app.route('/book3/publisher')
 def hmharcourt():
 	return render_template("HMHarcourt.html")
@@ -68,4 +64,3 @@ if __name__ == "__main__":
     app.run()
 
 # end of main3.py
-
