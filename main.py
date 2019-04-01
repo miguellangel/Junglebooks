@@ -5,13 +5,20 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
-books = [{'title': 'Software Engineering', 'id': '1'},  \
-         {'title':'Algorithm Design', 'id':'2'},        \
-         {'title':'Python', 'id':'3'}]
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    book_covers = [{
+    "title": "Harry Potter and the Sorcerer's Stone", \
+    "image_url": "https://books.google.com/books/content/images/frontcover/wrOQLV6xB-wC?fife=w500"}, \
+
+    {"title": "A Memory of Light", \
+    "image_url": "https://books.google.com/books/content/images/frontcover/L0hFAwAAQBAJ?fife=w500"}, \
+
+    {"title": "The Fellowship of the Ring", \
+    "image_url": "https://books.google.com/books/content/images/frontcover/aWZzLPhY4o0C?fife=w500"}]
+
+    return render_template("index.html", book_covers = book_covers)
 
 @app.route('/about')
 def about():

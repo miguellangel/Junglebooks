@@ -2,88 +2,88 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- Local CSS -->
-  <link type="text/css" rel="stylesheet" href="./../static/css/index.css">
-  <title>cs329e-idb:about</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Local CSS -->
+    <link type="text/css" rel="stylesheet" href="./../static/css/index.css">
+    <title>cs329e-idb-book</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg" id="nav-top">
-    <a class="navbar-brand" href="{{url_for('index')}}">iBDb</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-expand-lg" id="nav-top">
+        <a class="navbar-brand" href="{{url_for('index')}}">iBDb</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{url_for('about')}}">About</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="{{url_for('statistics')}}">Statistics</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search for a book" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row" id="book-row-container">
-      <div class="col-md-3 row_div">
-        <span>Harry Potter and the Sorcerer's Stone</span>
-        <div class="img-container">
-          <img src="https://books.google.com/books/content/images/frontcover/wrOQLV6xB-wC?fife=w500" alt="" class="img-responsive book-image">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('about')}}">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{{url_for('statistics')}}">Statistics</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search for a book" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-        <div>Author:<a href="{{url_for('jkrowling')}}"> J. K. Rowling</a></div>
-        <div>Publisher:<a href="{{url_for('pottermore')}}"> Pottermore</a></div>
-        <div>Date Published: 2015-12-08 </div>
-      </div>
-      <div class="col-md-8 row_div">
-        <div class="h4">Description:</div>
-        <p>"Turning the envelope over, his hand trembling, Harry saw a purple wax seal bearing a coat of arms; a lion, an eagle, a badger and a snake surrounding a large letter 'H'." Harry Potter has never even heard of Hogwarts when the letters
-          start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed
-          giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!</p>
-
-        <div class="h4">Related Books</div>
-        <div class="rel-books-wrapper">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-4">
-                <img src="https://books.google.com/books/content/images/frontcover/5iTebBW-w7QC?fife=w500" class="book-image img-responsive">
-              </div>
-              <div class="col-sm-4">
-                <img src="https://books.google.com/books/content/images/frontcover/Sm5AKLXKxHgC?fife=w500" class="book-image img-responsive">
-              </div>
-              <div class="col-sm-4">
-                <img src="https://books.google.com/books/content/images/frontcover/qaKkenvL29UC?fife=w500" class="book-image img-responsive">
-              </div>
+    </nav>
+    <div class="container">
+        <div class="row" id="book-row-container">
+            <div class="col-md-3 row_div">
+                <span>Harry Potter and the Sorcerer's Stone</span>
+                <div class="img-container">
+                    <img src="https://books.google.com/books/content/images/frontcover/wrOQLV6xB-wC?fife=w500" alt="" class="img-responsive book-image">
+                </div>
+                <div>Author:<a href="{{url_for('jkrowling')}}"> J. K. Rowling</a></div>
+                <div>Publisher:<a href="{{url_for('pottermore')}}"> Pottermore</a></div>
+                <div>Date Published: 2015-12-08 </div>
             </div>
-          </div>
+            <div class="col-md-8 row_div">
+                <div class="h4">Description:</div>
+                <p>"Turning the envelope over, his hand trembling, Harry saw a purple wax seal bearing a coat of arms; a lion, an eagle, a badger and a snake surrounding a large letter 'H'." Harry Potter has never even heard of Hogwarts when the letters
+                    start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed
+                    giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!</p>
+
+                <div class="h4">Related Books</div>
+                <div class="rel-books-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img src="https://books.google.com/books/content/images/frontcover/5iTebBW-w7QC?fife=w500" class="book-image img-responsive">
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="https://books.google.com/books/content/images/frontcover/Sm5AKLXKxHgC?fife=w500" class="book-image img-responsive">
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="https://books.google.com/books/content/images/frontcover/qaKkenvL29UC?fife=w500" class="book-image img-responsive">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
 
         </div>
-      </div>
-
 
     </div>
 
-  </div>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
