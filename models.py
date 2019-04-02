@@ -13,32 +13,30 @@ class Book(db.Model):
 
  title = db.Column(db.String(80), nullable = False)
  google_id = db.Column(db.String(80), primary_key = True)
- isbn = db.Column(db.BigInteger, nullable = True)
+ isbn = db.Column(db.String(), nullable = True)
  date = db.Column(db.String(80), nullable = True)
  image = db.Column(db.String(80), nullable = True)
  description = db.Column(db.String(), nullable = True)
  
 class Publisher(db.Model):
  __tablename__ = 'publisher'
- pub_id = db.Column(db.String(80), primary_key = True)
- pub_name = db.Column(db.String(80), nullable = False)
- wiki_url = db.Column(db.String(), nullable = False)
- pub_description = db.Column(db.String(), nullable = False)
- pub_owner = db.Column(db.String(), nullable = False)
- pub_image = db.Column(db.String(), nullable = False)
- pub_website = db.Column(db.String(), nullable = False)
+ pub_name = db.Column(db.String(80), primary_key= True)
+ wiki_url = db.Column(db.String(), nullable = True)
+ pub_description = db.Column(db.String(), nullable = True)
+ pub_owner = db.Column(db.String(), nullable = True)
+ pub_image = db.Column(db.String(), nullable = True)
+ pub_website = db.Column(db.String(), nullable = True)
 
 class Author(db.Model):
  __tablename__ = 'author'
- author_id = db.Column(db.String(80), primary_key = True)
- name = db.Column(db.String(80), nullable = False)
- born = db.Column(db.String(), nullable = False)
- education = db.Column(db.String(), nullable = False)
- nationality = db.Column(db.String(), nullable = False)
- description = db.Column(db.String(), nullable = False)
- alma_mater = db.Column(db.String(), nullable = False)
- wiki_url = db.Column(db.String(), nullable = False)
- image = db.Column(db.String(), nullable = False)
+ name = db.Column(db.String(80), primary_key= True)
+ born = db.Column(db.String(), nullable = True)
+ education = db.Column(db.String(), nullable = True)
+ nationality = db.Column(db.String(), nullable = True)
+ description = db.Column(db.String(), nullable = True)
+ alma_mater = db.Column(db.String(), nullable = True)
+ wiki_url = db.Column(db.String(), nullable = True)
+ image = db.Column(db.String(), nullable = True)
 
 db.create_all()
 # End of models.py 
