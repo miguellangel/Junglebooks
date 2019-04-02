@@ -1,4 +1,6 @@
-# import and open the json file
+#==========import and open the json file=========
+#================================================
+
 import json
 from models import app, db, Book, Publisher, Author
 
@@ -9,22 +11,24 @@ def load_json(filename):
 
     return jsn
 
-# extract and format the book data
+#==========extract and format the book data=======
+#=================================================
+
 def create_books():
     book = load_json('books.json')
-    list_googleID = []
+    list_googleID = []							#list of already recorded books in the DB
     list_key = ['title', 'google_id', 'isbn','publication_date','image_url','description']
     
     for oneBook in book['Books']:
         if oneBook['google_id'] in list_googleID:
-          continue   #publisher info already exists	
-        list_googleID.append(oneBook['google_id'])
-        newBooklist = []
-        keys_list = oneBook.keys()
-        for key in list_key :
-          if key in keys_list:
+          continue   									#skip this book since it already exists in DB	
+        list_googleID.append(oneBook['google_id'])		#track book that has been read into DB
+        newBooklist = []						#initialize list of book attributes
+        keys_list = oneBook.keys()				#get keys of dict to check which attributes are missing
+        for key in list_key :					#iterate through every possible attribute
+          if key in keys_list:					#assign value to the attribite if it exist in the keys
             key = oneBook[key]
-          else:
+          else:									#otherwise assign Null value (i.e no info on that attribute)
             key = None
           newBooklist.append(key)
         
@@ -35,11 +39,15 @@ def create_books():
         db.session.add(newBook)
         # commit the session to my DB.
         db.session.commit()
-    print("done")
+    
 
 
-# extract and format the publisher data
+#============extract and format the publisher data========
+#=========================================================
+
 def create_pub():
+    # implemented same algorithm as create_books
+	
     book = load_json('books.json')
     
     list_pub = []
@@ -68,10 +76,14 @@ def create_pub():
        db.session.add(newPub)
        # commit the session to my DB
        db.session.commit()
-    print('done')
+    
 		
-# create and format the author data
+#============create and format the author data================
+#=============================================================
+
 def create_authors():
+    # implemented same algorithm as create_books
+	
     book = load_json('books.json')
     list_author = []
     list_authorKeys = ['name','born','education','nationality','description','alma_mater','wiki_url','image']
@@ -101,7 +113,7 @@ def create_authors():
        db.session.add(newAuthor)
         # commit the session to my DB
        db.session.commit()
-    print('done')
+    
 
 
 create_books()
