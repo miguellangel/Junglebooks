@@ -40,8 +40,29 @@
     </nav>
     <div class="container" style="height: ">
         <div>
-            <h2>Available books</h2>
-        </div>
+            <span class="h3">Available books</span>
+            <span style="float: right">
+                Sort by:
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Popularity
+                    <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Popularity</a></li>
+                            <li><a href="#">Rating</a></li>
+                            <li><a href="#">Alphabetically</a></li>
+                        </ul>
+            </span>
+            <span style="float: right">
+                Showing
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">3
+                    <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">8</a></li>
+                        </ul>
+                per page.
+            </span>
+
         <div class="row" style="margin-top: 10px; height: 550px; border-radius: 10px; text-align-last: center">
             {% if book_covers == [] %}
                 <p>No books exist</p>
@@ -59,7 +80,23 @@
                 {% endfor %}
             {% endif %}
 
+            <nav aria-label="..." style="width:100%">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+
     </div>
 
 
