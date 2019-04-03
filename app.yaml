@@ -7,7 +7,7 @@ runtime_config:
 # Replace user, password, database, and instance connection name with the values obtained
 # when configuring your Cloud SQL instance.
 DB_STRING: >-
- postgresql+psycopg2://postgres:idg20@/postgres?host=/cloudsql/cs329e-idb-235421:us- central1:bookdb1
+ postgresql+psycopg2://postgres:idbg20@/postgres?host=/cloudsql/cs329e-idb-235421:us- central1:bookdb1
 #[END env]
 #[START cloudsql_settings]
 # Replace project and instance with the values obtained when configuring your 
