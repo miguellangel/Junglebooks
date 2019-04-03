@@ -70,7 +70,9 @@
                 {% for cover in book_covers %}
                     <div class="col-md-4">
                         <div class="book-card">
-                            <a href="{{url_for('book1')}}" style="display: inline">
+                            <!-- Try to strip all non-alphabet chars in url_for -->
+                            {% set g_id = cover["google_id"]|replace("-", "") %}
+                            <a href="{{url_for(g_id)}}" style="display: inline">
                                 <div class="img_placeholder">
                                     <img class="img-reponsive" src="{{cover["image_url"]}}">
                                 </div>

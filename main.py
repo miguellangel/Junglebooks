@@ -9,14 +9,18 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     book_covers = [{
-    "title": "Harry Potter and the Sorcerer's Stone", \
-    "image_url": "https://books.google.com/books/content/images/frontcover/wrOQLV6xB-wC?fife=w500"}, \
-
-    {"title": "A Memory of Light", \
-    "image_url": "https://books.google.com/books/content/images/frontcover/L0hFAwAAQBAJ?fife=w500"}, \
-
-    {"title": "The Fellowship of the Ring", \
-    "image_url": "https://books.google.com/books/content/images/frontcover/aWZzLPhY4o0C?fife=w500"}]
+    "google_id": "wrOQLV6xB-wC",
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "image_url": "https://books.google.com/books/content/images/frontcover/wrOQLV6xB-wC?fife=w500"
+    }, {
+    "google_id": "L0hFAwAAQBAJ",
+    "title": "A Memory of Light",
+    "image_url": "https://books.google.com/books/content/images/frontcover/L0hFAwAAQBAJ?fife=w500"
+    }, {
+    "google_id": "aWZzLPhY4o0C",
+    "title": "The Fellowship of the Ring",
+    "image_url": "https://books.google.com/books/content/images/frontcover/aWZzLPhY4o0C?fife=w500"
+    }]
 
     return render_template("index.html", book_covers = book_covers)
 
@@ -28,17 +32,17 @@ def about():
 def statistics():
 	return render_template("statistics.html")
 
-@app.route('/book1')
-def book1():
-	return render_template("book_1.html")
+@app.route('/books/Harry-Potter-and-the-Sorcerers-Stone')
+def wrOQLV6xBwC():
+	return render_template("Harry-Potter-and-the-Sorcerers-Stone.html")
 
-@app.route('/book2')
-def book2():
-	return render_template("book_2.html")
+@app.route('/books/A-Memory-of-Light')
+def L0hFAwAAQBAJ():
+	return render_template("A-Memory-of-Light.html")
 
-@app.route('/book3')
-def book3():
-	return render_template("book_3.html")
+@app.route('/books/the-Fellowship-of-the-Ring')
+def aWZzLPhY4o0C():
+	return render_template("the-Fellowship-of-the-Ring.html")
 
 @app.route('/book1/author')
 def jkrowling():
