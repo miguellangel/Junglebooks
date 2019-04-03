@@ -1,0 +1,280 @@
+commit afee2f1ce5a92685cefd006ef8bc8984512c30a6
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Tue Apr 2 19:47:28 2019 -0500
+
+    renamed files, books clicked now dynamically link to corresponding book html
+
+commit 31ec0bcb48c4c0bbd2bb3e11af9d0c9fc27e6087
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Tue Apr 2 16:28:58 2019 -0500
+
+    experimenting with pagination
+
+commit 88b83ff057708b4d7806200b59b3e47a8cf7fcf1
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Mon Apr 1 18:19:42 2019 -0500
+
+    implement JINJA + Flask dynamic variables
+
+commit 7d8a39681cb11ec3277eb9192394197a59726370
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Sat Mar 30 13:17:01 2019 -0500
+
+    fixed error 404 for book2
+
+commit bbfe25a59761cc91e558e99726be9461dec8bfc0
+Author: Jose Rosales <joserosales@wireless-10-147-220-254.public.utexas.edu>
+Date:   Fri Mar 29 16:22:53 2019 -0500
+
+    Created Book.py
+
+commit c06d1d8dbebdb2ac5600d622a75a3d9b613d6b1f
+Merge: db9d881 002465a
+Author: Jose Rosales <joserosales@wireless-10-147-220-254.public.utexas.edu>
+Date:   Fri Mar 29 16:07:48 2019 -0500
+
+    Added main3.py
+
+commit db9d88159263e700ad5e9ae8e054346b896cf14c
+Author: Jose Rosales <joserosales@wireless-10-147-220-254.public.utexas.edu>
+Date:   Fri Mar 29 15:57:44 2019 -0500
+
+    Edited main.py to incorporate database
+
+commit 002465a5e474e04723c3bcdfc6cf6ef30bc90c59
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Fri Mar 29 15:16:18 2019 -0500
+
+    made tables pretty, added ability to sort
+
+commit 24af76a02c14beb87132e2528cc730ce9ba62e9e
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Thu Mar 28 16:55:57 2019 -0500
+
+    fix invisible text on navbar, fix nonlinkable refs
+
+commit 234d7ddc0f150c18b8060c48f27c9fbe72652856
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Thu Mar 28 16:22:46 2019 -0500
+
+    revert some accidentally deleted items in css
+
+commit 3e54cf1edb9fc040a5115d658089717d308e7d91
+Author: musty-j <40575672+musty-j@users.noreply.github.com>
+Date:   Sun Mar 24 21:53:39 2019 -0500
+
+    linking publishers pages
+
+commit f10d1c917ef6c75c330c4c40fbd1ce458c2bd7aa
+Author: musty-j <40575672+musty-j@users.noreply.github.com>
+Date:   Sun Mar 24 21:45:52 2019 -0500
+
+    linking all pages together
+
+commit e8649094d223b9fb321a174766416240fe7a5637
+Merge: 6b130ac c989c78
+Author: miguel__ <arriaga.miguel23@gmail.com>
+Date:   Sun Mar 24 21:44:20 2019 -0500
+
+    Merge branch 'dev' of gitlab.com:Sommer_C/cs329e-ibd into dev
+
+commit 6b130acf02cc3bc0a6b2eb20b6ad9a672f144ca6
+Author: miguel__ <arriaga.miguel23@gmail.com>
+Date:   Sun Mar 24 21:43:56 2019 -0500
+
+    finished publisher info
+
+commit c989c78d7003f26bb7166ccf950c6dbde03b171f
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:43:28 2019 +0000
+
+    Upload New File
+
+commit 853ab9ff734a226e60c839ee2be0cc2b9f75ecf0
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:43:14 2019 +0000
+
+    Upload New File
+
+commit 8fa9c2f7ff3332fd3e1b9f03199dd2cba5336ef2
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:43:01 2019 +0000
+
+    Upload New File
+
+commit 1db88facc7817c6fbfbf015ed0cef5cc9123f953
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:42:49 2019 +0000
+
+    Upload New File
+
+commit 73ca4e60e5b3a2db6838e1f450c40acb3fafd532
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:42:22 2019 +0000
+
+    Upload New File
+
+commit 0b35de16951f17367bd8f570ca5cae19c19d61f4
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:42:01 2019 +0000
+
+    Upload New File
+
+commit c3c2ed5d9a9a7a9d1a0ad7ca06d2a63323802f2d
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:41:28 2019 +0000
+
+    Add new directory
+
+commit 91b8803069820aa3a9234eeb58561263f625ae9e
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:40:57 2019 +0000
+
+    Add new directory
+
+commit c7c3098ad6cca1de2359bec7a57842321443122c
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:39:23 2019 +0000
+
+    Update index.css
+
+commit e8352c5a1504ec82f08ae4a49e2ee36b6a19393b
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:38:31 2019 +0000
+
+    Update statistics.html
+
+commit b498d1ad0707f12f39ecfbf5af3e63a6290129e8
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:36:20 2019 +0000
+
+    Update about.html
+
+commit 082278122bbade127e3c30efbe218b679188fa3b
+Author: miguel__ <arriaga.miguel23@gmail.com>
+Date:   Sun Mar 24 21:35:47 2019 -0500
+
+    add publishers
+
+commit 9fa14a1fc61dff393a35f2276f74570740c5a6be
+Author: miguel__ <arriaga.miguel23@gmail.com>
+Date:   Sun Mar 24 20:56:33 2019 -0500
+
+    added publisher-template
+
+commit 7e2840957ea8c1e74ec46472f54789cc15e13a43
+Author: musty-j <40575672+musty-j@users.noreply.github.com>
+Date:   Sun Mar 24 20:28:39 2019 -0500
+
+    adding author pages
+
+commit c587dff7abf1fe75efa8e126f6b290af0b432c03
+Author: Jose Rosales <joserosales@wireless-10-145-144-79.public.utexas.edu>
+Date:   Sun Mar 24 20:16:46 2019 -0500
+
+    Added tempelate for book 3
+
+commit ff365a22db350b72167c2398effa1ad059c5b846
+Author: Jose Rosales <joserosales@wireless-10-145-144-79.public.utexas.edu>
+Date:   Sun Mar 24 20:06:12 2019 -0500
+
+    Added template for book 2
+
+commit 04d4d044aa5957878a4d5611ee7821588cd2767a
+Author: Jose Rosales <joserosales@wireless-10-145-144-79.public.utexas.edu>
+Date:   Sun Mar 24 19:39:26 2019 -0500
+
+    Added book information
+
+commit 70f7ec289aedaaf9fab94a3ed74d64edb71786a4
+Author: Sommer <schavez@utexas.edu>
+Date:   Sun Mar 24 19:28:18 2019 -0500
+
+    forgot to save the file before pushing
+
+commit 91aa362f232985347a32daf365551af6650c2989
+Author: Sommer <schavez@utexas.edu>
+Date:   Sun Mar 24 19:16:57 2019 -0500
+
+    adding jkrrowling author page
+
+commit 86eecf23d284fde27f25b5486ac1ac9b61e8d948
+Author: Sommer <schavez@utexas.edu>
+Date:   Sun Mar 24 18:31:32 2019 -0500
+
+    fix linkable object in book page template
+
+commit 40481db7c9f017efb3332648476a9c552e8a6004
+Author: Sommer <schavez@utexas.edu>
+Date:   Sun Mar 24 18:21:48 2019 -0500
+
+    updated wiki and book page template
+
+commit b801af85df1ab3df52cb41a8c5d55850a8d69257
+Merge: a0de961 dc8b04f
+Author: Jose Rosales <joserosales@Joses-MacBook-Pro-3.local>
+Date:   Sun Mar 24 16:17:48 2019 -0500
+
+    Merge branch 'dev' of https://gitlab.com/Sommer_C/cs329e-ibd into dev
+
+commit a0de96149585b9b1a5aec05f7aee7eae7deb4ded
+Author: Jose Rosales <joserosales@Joses-MacBook-Pro-3.local>
+Date:   Sun Mar 24 15:51:27 2019 -0500
+
+    Wrote program to format db
+
+commit dc8b04fceb3ae5a57083c423e25fedb499f0b137
+Merge: 5baf6f2 0352116
+Author: Sommer <schavez@utexas.edu>
+Date:   Sun Mar 24 15:01:55 2019 -0500
+
+    Merge branch 'dev' of gitlab.com:Sommer_C/cs329e-ibd into dev
+
+commit 5baf6f2337992cabf35140ca5e672372efb3ebb7
+Author: Sommer <schavez@utexas.edu>
+Date:   Sun Mar 24 14:59:59 2019 -0500
+
+    Fixed errors regarding href
+
+commit 0352116c07fa97377697d4a5b57520392e51f438
+Merge: 6bf4d73 e243aaf
+Author: Jose Rosales <joserosales@Joses-MacBook-Pro-3.local>
+Date:   Sun Mar 24 14:33:14 2019 -0500
+
+    Merge branch 'dev' of https://gitlab.com/Sommer_C/cs329e-ibd into dev
+
+commit 6bf4d73f195c3d22e7c03642fbac310ebf2838fc
+Author: Jose Rosales <joserosales@Joses-MacBook-Pro-3.local>
+Date:   Sun Mar 24 14:30:03 2019 -0500
+
+    Formatting json database
+
+commit e243aaf56a40dcdc10ac2f1959dc3cb8620ccf8c
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Sun Mar 24 14:10:10 2019 -0500
+
+    json file uploaded
+
+commit 22fd481f77f44c9de3b4cb68d3bb8a383faf4721
+Author: miguel__ <arriaga.miguel123@gmail.com>
+Date:   Fri Mar 22 00:19:55 2019 -0500
+
+    Implemented bootstrap features (nav-bar and grid), updated the home page.
+
+commit 9895a524272760b7bce2362587eca0799e0164e7
+Author: miguel__ <arriaga.miguel123@gmail.com>
+Date:   Sat Mar 16 01:40:11 2019 -0500
+
+    basic horizontal navigation bar + styling closes #9
+
+commit fc898fa2c6ab1f585ba6bc5c45b7293d9fc21071
+Author: miguel__ <arriaga.miguel123@gmail.com>
+Date:   Fri Mar 15 17:36:24 2019 -0500
+
+    template files
+
+commit ba1317694569737744c48da9f75ee2c8c7c2c88f
+Author: Sommer Chavez <schavez@utexas.edu>
+Date:   Wed Mar 13 20:49:03 2019 +0000
+
+    Initial commit
