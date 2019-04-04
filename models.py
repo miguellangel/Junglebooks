@@ -17,7 +17,7 @@ class Book(db.Model):
  date = db.Column(db.String(80), nullable = True)
  image = db.Column(db.String(80), nullable = True)
  description = db.Column(db.String(), nullable = True)
- 
+
 class Publisher(db.Model):
  __tablename__ = 'publisher'
  pub_name = db.Column(db.String(80), primary_key= True)
@@ -38,5 +38,5 @@ class Author(db.Model):
  wiki_url = db.Column(db.String(), nullable = True)
  image = db.Column(db.String(), nullable = True)
 
-db.create_all()
-# End of models.py 
+#db.create_all()
+# End of models.py
