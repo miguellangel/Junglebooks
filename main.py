@@ -108,6 +108,33 @@ dummy_base = [{
     ]
 }
 ]
+@app.route('/publishers/<string:requested_publisher>')
+def publishers(requested_publisher):
+    publisher = None
+    for cur_book in dummy_base:
+        if requested_publisher == cur_book["publishers"][0]["name"]:
+            publisher = requested_publisher
+            break
+    if publisher:
+        return render_template("publisher_template.html", book = cur_book)
+    return "Publisher not found"
+
+@app.route('/authors/<string:requested_author>')
+def authors(requested_author):
+    author = None
+    for cur_book in dummy_base:
+        if requested_author == cur_book["authors"][0]["name"]:
+            author = requested_author
+            break # found the author
+    if author:
+        related = []
+        for book_ in dummy_base:
+            if cur_book['authors'][0]['name'] == book_['authors'][0]['name']:
+                if cur_book['title'] != book_['title']:
+                    related.append(book_['image_url'])
+                    
+        return render_template("author_template.html", book = cur_book, related = related[:3])
+    return "Author not found"
 
 @app.route('/books/<string:requested_book>')
 def books(requested_book):

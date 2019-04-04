@@ -72,7 +72,7 @@
                         <div class="book-card">
                             <!-- Try to strip all non-alphabet chars in url_for -->
                             {% set g_id = book["google_id"]|replace("-", "") %}
-                            <a href="{{request.url}}books/{{book['title']}}" style="display: inline">
+                            <a href="{{request.url_root}}books/{{book['title']}}" style="display: inline">
                                 <div class="img_placeholder">
                                     <img class="img-reponsive" src="{{book["image_url"]}}">
                                 </div>
