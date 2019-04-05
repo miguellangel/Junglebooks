@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Local CSS -->
     <link type="text/css" rel="stylesheet" href="./../static/css/index.css">
-    <title>cs329e-idb-{{book['title']}}</title>
+    <title>cs329e-idb:about</title>
 </head>
 
 <body>
@@ -41,35 +41,27 @@
     <div class="container">
         <div class="row" id="book-row-container">
             <div class="col-md-3 row_div">
-                <span>{{book['title']}}</span>
-                <div class="img-container">
-                    <img src="{{book['image_url']}}" alt="" class="img-responsive book-image">
+                <h4>{{book["publishers"][0]["name"]}}</h4>
+                <div>Authors:
+                    <ul>
+                        <li><a href= "{{request.url_root}}authors/{{book['authors'][0]['name']}}">{{book['authors'][0]['name']}}</a></li>
+                    </ul>
                 </div>
-                <div>Author:<a href="{{request.url_root}}authors/{{book['authors'][0]['name']}}">{{book['authors'][0]['name']}}</a></div>
-                <div>Publisher:<a href="{{request.url_root}}publishers/{{book['publishers'][0]['name']}}"> {{book['publishers'][0]['name']}}</a></div>
-                <div>Date Published: {{book['publication_date']}} </div>
+
+
+                <div>Publisher Website:<a href="{{book['publishers'][0]['website']}}"> {{book['publishers'][0]['name']}}</a> </div>
+                <div><a href="{{book['publishers'][0]['wikipedia_url']}}">More about this publisher here!</a></div>
+
+
+
             </div>
             <div class="col-md-8 row_div">
-                <div class="h4">Description:</div>
-                <p>{{book['description']}}</p>
-                <div class="h4">Related Books</div>
-                <div class="rel-books-wrapper">
-                    <div class="container">
-                        <div class="row">
-                            {% if related == [] %}
-                                <p>There are no related books.</p>
-                            {% else %}
-                                {% for cover in related %}
-                                    <div class="col-sm-4">
-                                        <img src="{{cover}}" class="book-image img-responsive">
-                                    </div>
-                                {% endfor %}
-                            {% endif %}
+                <div class="h5">Founded: {{book["publishers"][0]["founded"]}}</div>
+                <div class="h5">Owner: {{book["publishers"][0]["parent company"]}}</div>
+                <div></div>
+                <div class="h4">Description: </div>
+                <p>{{book["publishers"][0]["description"]}}</p>
 
-                        </div>
-                    </div>
-
-                </div>
             </div>
 
 
