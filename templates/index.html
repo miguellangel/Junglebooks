@@ -64,17 +64,17 @@
             </span>
 
         <div class="row" style="margin-top: 10px; height: 550px; border-radius: 10px; text-align-last: center">
-            {% if dummy_base == [] %}
+            {% if books == [] %}
                 <p>No books exist</p>
             {% else %}
-                {% for book in dummy_base %}
+                {% for book in books %}
                     <div class="col-md-4">
                         <div class="book-card">
                             <!-- Try to strip all non-alphabet chars in url_for -->
-                            {% set g_id = book["google_id"]|replace("-", "") %}
-                            <a href="{{request.url}}books/{{book['title']}}" style="display: inline">
+                            {% set g_id = book.google_id|replace("-", "") %}
+                            <a href="{{request.url}}books/{{book.title}}" style="display: inline">
                                 <div class="img_placeholder">
-                                    <img class="img-reponsive" src="{{book["image_url"]}}">
+                                    <img class="img-reponsive" src="{{book.image}}">
                                 </div>
                             </a>
                         </div>

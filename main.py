@@ -4,7 +4,15 @@
 #-----------------------------------------
 from flask import Flask, render_template
 
-app = Flask(__name__)
+from models import app, db, Book, Author, Publisher
+
+# from create_db import create_books, create_authors, create_pub
+# db.create_all()
+# create_books()
+# create_authors()
+# create_pub()
+
+
 
 dummy_base = [{
     "google_id": "wrOQLV6xB-wC",
@@ -111,28 +119,27 @@ dummy_base = [{
 
 @app.route('/books/<string:requested_book>')
 def books(requested_book):
-    # point to right book
-    book = None # book doesn't exist by default
-    for cur_book in dummy_base:
-        if requested_book == cur_book["title"]:
-            book = requested_book
+    # search for book in database
+    db_book = Book.query.filter_by(title=requested_book).all()
 
-            # determine related books
-            break # book was found, book will be the last item before break
-
-    if book:
-        related = []
-        for book_ in dummy_base:
-            if cur_book['authors'][0]['name'] == book_['authors'][0]['name']:
-                if cur_book['title'] != book_['title']:
-                    related.append(book_['image_url'])
-                    
-        return render_template("book_template.html", book = cur_book, related = related[:3])
-    return "Book does not exist"
-
+    print(type(db_book))
+    if db_book:
+        # related = []
+        # for book_ in dummy_base:
+        #     if cur_book['authors'][0]['name'] == book_['authors'][0]['name']:
+        #         if cur_book['title'] != book_['title']:
+        #             related.append(book_['image_url'])
+        #
+        #
+        return render_template("book_template.html", book = db_book)
+    else:
+        return "Book does not exist"
 @app.route('/')
 def index():
-    return render_template("index.html", dummy_base = dummy_base)
+    # limit the number of covers per page
+    book_db = Book.query.all()
+    books_per_page = 6
+    return render_template("index.html", books = book_db[:books_per_page])
 
 @app.route('/about')
 def about():
