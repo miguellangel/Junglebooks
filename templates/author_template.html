@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Local CSS -->
     <link type="text/css" rel="stylesheet" href="./../static/css/index.css">
-    <title>cs329e-idb:{{book['authors'][0]['name']}}</title>
+    <title>cs329e-idb:{{author.name}}</title>
 </head>
 
 <body>
@@ -41,37 +41,30 @@
         </div>
     </nav>
     <div class="containThe fixed navbar will overlay your other content, unless you add padding to the top of the <body>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.er">
-        <div class="row" id="book-row-container">
+        <div class="row" id="book-row-container" style="width: 100%">
             <div class="col-md-3 row_div">
-                <span>{{book["authors"][0]["name"]}}</span>
+                <span></span>
                 <div class="img-container">
-                    <img src= "{{book['authors'][0]['image_url']}}" alt="" class="img-responsive book-image">
+                    <img src= "{{author.image}}" alt="" class="img-responsive book-image">
                 </div>
 
 
 
-                {%if "alma_mater" in book["authors"][0]%}
-                    <div>Alma Mater: {{book["authors"][0]["alma_mater"]}}</div>
-                {%endif%}
-                <div>Wikipedia:<a href="{{book['authors'][0]['wikipedia_url']}}"> About {{book["authors"][0]["name"]}}</a></div>
-                <div>Publishers:<a href="{{request.url_root}}publishers/{{book['publishers'][0]['name']}}"> About {{book["publishers"][0]["name"]}}</a></div>
+                <div>Alma Mater: {{author.alma_mater}}</div>
+       
+                <div>Wikipedia:<a href= "{{author.wiki_url}}"> About {{author.name}}</a></div>
+                <div>Publishers:<a href="{{request.url_root}}"> About </a></div>
 
             </div>
             <div class="col-md-8 row_div">
-                <div>Born: {{book["authors"][0]["born"]}}</div>
-                {%if "died" in book["authors"][0]%}
-                    <div>Died: {{book["authors"][0]["died"]}}
-                {% endif %}
+                <div>Born: {{author.born}}</div>
+                <div>Education: {{author.education}} </div> 
+               
 
-                {% if "education" in book["authors"][0] %}
-                   <div>Education: {{book["authors"][0]["education"]}}</div> 
-                {% endif %}
 
-                {% if "nationality" in book["authors"][0] %}
-                    <div>Nationality: {{book["authors"][0]["nationality"]}}</div>
-                {% endif %}
+                <div>Nationality: {{author.nationality}}</div>
                 <div class="h4">Description:</div>
-                <p>{{book["authors"][0]["description"]}}</p>
+                <p>{{author.description}}</p>
 
 
 
