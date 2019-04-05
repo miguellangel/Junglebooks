@@ -10,9 +10,9 @@ db = SQLAlchemy(app)
 
 #Creating a relational table to link up data acros tables in our database
 book_rel = db.Table('book_rel',
-    db.Column('name', db.String(), db.ForeignKey('author.name')),
+    db.Column('author_name', db.String(), db.ForeignKey('author.name')),
     db.Column('google_id', db.String(), db.ForeignKey('book.google_id')),
-    db.Column('pub_name', db.String(), db.ForeignKey('publisher.pub_name'))
+    db.Column('pub_name', db.String(), db.ForeignKey('publisher.name'))
 )
 
 #This class models the structure of the table Book.
@@ -22,11 +22,11 @@ book_rel = db.Table('book_rel',
 class Book(db.Model):
     __tablename__ = 'book'
 
-    title = db.Column(db.String(80), nullable = False)
     google_id = db.Column(db.String(80), primary_key = True)
+    title = db.Column(db.String(80), nullable = False)
     isbn = db.Column(db.String(), nullable = True)
-    date = db.Column(db.String(80), nullable = True)
-    image = db.Column(db.String(80), nullable = True)
+    publication_date = db.Column(db.String(80), nullable = True)
+    image_url = db.Column(db.String(80), nullable = True)
     description = db.Column(db.String(), nullable = True)
 
     # relationships
@@ -38,14 +38,15 @@ class Book(db.Model):
 #Attributes include name, born, education, nationality, description, alma_mater, wiki_url, and image. These attributes are nullable
 class Author(db.Model):
     __tablename__ = 'author'
-    name = db.Column(db.String(80), primary_key= True)
     born = db.Column(db.String(), nullable = True)
+    name = db.Column(db.String(80), primary_key= True)
     education = db.Column(db.String(), nullable = True)
     nationality = db.Column(db.String(), nullable = True)
     description = db.Column(db.String(), nullable = True)
+    died = db.Column(db.String(), nullable = True)
     alma_mater = db.Column(db.String(), nullable = True)
-    wiki_url = db.Column(db.String(), nullable = True)
-    image = db.Column(db.String(), nullable = True)
+    image_url = db.Column(db.String(), nullable = True)
+    wikipedia_url = db.Column(db.String(), nullable = True)
 
     # relationships
     books_written = db.relationship('Book', secondary=book_rel, backref=db.backref('books_written', lazy='dynamic'))
@@ -54,13 +55,15 @@ class Author(db.Model):
 # The structure is same as table Book and Author.
 class Publisher(db.Model):
     __tablename__ = 'publisher'
-    pub_name = db.Column(db.String(80), primary_key= True)
-    wiki_url = db.Column(db.String(), nullable = True)
-    pub_description = db.Column(db.String(), nullable = True)
-    pub_owner = db.Column(db.String(), nullable = True)
-    pub_image = db.Column(db.String(), nullable = True)
-    pub_website = db.Column(db.String(), nullable = True)
-
+    wikipedia_url = db.Column(db.String(), nullable = True)
+    name = db.Column(db.String(80), primary_key= True)
+    description = db.Column(db.String(), nullable = True)
+    owner = db.Column(db.String(), nullable = True)
+    image_url = db.Column(db.String(), nullable = True)
+    website = db.Column(db.String(), nullable = True)
+    founded = db.Column(db.String(), nullable = True)
+    location = db.Column(db.String(), nullable = True)
+    parent_company = db.Column(db.String(), nullable = True)
     # relationships
     books_published = db.relationship('Book', secondary=book_rel, backref=db.backref('books_published', lazy='dynamic'))
     authors_signed = db.relationship('Author', secondary=book_rel, backref=db.backref('authors_signed', lazy='dynamic'))
