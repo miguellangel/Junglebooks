@@ -38,5 +38,5 @@ class Author(db.Model):
  wiki_url = db.Column(db.String(), nullable = True)
  image = db.Column(db.String(), nullable = True)
 
-db.create_all()
+# db.create_all()
 # End of models.py 
