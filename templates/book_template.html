@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Local CSS -->
     <link type="text/css" rel="stylesheet" href="./../static/css/index.css">
-    <title>cs329e-idb-{{book['title']}}</title>
+    <title>cs329e-idb-{{book.title}}</title>
 </head>
 
 <body>
@@ -41,17 +41,17 @@
     <div class="container">
         <div class="row" id="book-row-container">
             <div class="col-md-3 row_div">
-                <span>{{book['title']}}</span>
+                <span>{{book.title}}</span>
                 <div class="img-container">
-                    <img src="{{book['image_url']}}" alt="" class="img-responsive book-image">
+                    <img src="{{book.image}}" alt="" class="img-responsive book-image">
                 </div>
-                <div>Author:<a href="{{request.url_root}}authors/{{book['authors'][0]['name']}}">{{book['authors'][0]['name']}}</a></div>
-                <div>Publisher:<a href="{{request.url_root}}publishers/{{book['publishers'][0]['name']}}"> {{book['publishers'][0]['name']}}</a></div>
-                <div>Date Published: {{book['publication_date']}} </div>
+                <div>Author:<a href="{{request.url_root}}"></a></div>
+                <div>Publisher:<a href="{{request.url_root}}"></a></div>
+                <div>Date Published: {{book.date}} </div>
             </div>
             <div class="col-md-8 row_div">
                 <div class="h4">Description:</div>
-                <p>{{book['description']}}</p>
+                <p>{{book.description}}</p>
                 <div class="h4">Related Books</div>
                 <div class="rel-books-wrapper">
                     <div class="container">

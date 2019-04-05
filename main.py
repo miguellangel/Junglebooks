@@ -129,18 +129,15 @@ def publishers(requested_publisher):
 
 @app.route('/authors/<string:requested_author>')
 def authors(requested_author):
-    author = None
-    for cur_book in dummy_base:
-        if requested_author == cur_book["authors"][0]["name"]:
-            author = requested_author
-            break # found the author
+    author_db = Author.query.filter_by(name=requested_author)
+    print(author_db)
     if author:
         related = []
         for book_ in dummy_base:
             if cur_book['authors'][0]['name'] == book_['authors'][0]['name']:
                 if cur_book['title'] != book_['title']:
                     related.append(book_['image_url'])
-                    
+
         return render_template("author_template.html", book = cur_book, related = related[:3])
     return "Author not found"
 
@@ -148,17 +145,9 @@ def authors(requested_author):
 def books(requested_book):
     # search for book in database
     db_book = Book.query.filter_by(title=requested_book).all()
-
-    print(type(db_book))
     if db_book:
-        # related = []
-        # for book_ in dummy_base:
-        #     if cur_book['authors'][0]['name'] == book_['authors'][0]['name']:
-        #         if cur_book['title'] != book_['title']:
-        #             related.append(book_['image_url'])
-        #
-        #
-        return render_template("book_template.html", book = db_book)
+        #find related books!!!
+        return render_template("book_template.html", book = db_book[0])
     else:
         return "Book does not exist"
 @app.route('/')
