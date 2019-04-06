@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Local CSS -->
     <link type="text/css" rel="stylesheet" href="./../static/css/index.css">
-    <title>cs329e-idb:{{book['authors'][0]['name']}}</title>
+    <title>cs329e-idb:{{author.name}}</title>
 </head>
 
 <body>
@@ -40,64 +40,68 @@
             </div>
         </div>
     </nav>
-    <div class="containThe fixed navbar will overlay your other content, unless you add padding to the top of the <body>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.er">
+    <div class="container">
         <div class="row" id="book-row-container">
             <div class="col-md-3 row_div">
-                <span>{{book["authors"][0]["name"]}}</span>
+                <span>{{author.name}}</span>
                 <div class="img-container">
-                    <img src= "{{book['authors'][0]['image_url']}}" alt="" class="img-responsive book-image">
+                    <img src= "{{author.image_url}}" alt="" class="img-responsive book-image">
                 </div>
 
 
 
-                {%if "alma_mater" in book["authors"][0]%}
-                    <div>Alma Mater: {{book["authors"][0]["alma_mater"]}}</div>
+                {%if author.alma_mater%}
+                    <div>Alma Mater: {{author.alma_mater}}</div>
                 {%endif%}
-                <div>Wikipedia:<a href="{{book['authors'][0]['wikipedia_url']}}"> About {{book["authors"][0]["name"]}}</a></div>
-                <div>Publishers:<a href="{{request.url_root}}publishers/{{book['publishers'][0]['name']}}"> About {{book["publishers"][0]["name"]}}</a></div>
+                <div>Wikipedia:<a href="{{author.wikipedia_url}}"> {{author.name}}</a></div>
+                <div>Publishers:
+                    <ul>
+                        {% for publisher in author.publisher %}
+                            <li>
+                                <a href="{{request.url_root}}publishers/{{publisher.name}}">{{publisher.name}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
 
             </div>
             <div class="col-md-8 row_div">
-                <div>Born: {{book["authors"][0]["born"]}}</div>
-                {%if "died" in book["authors"][0]%}
-                    <div>Died: {{book["authors"][0]["died"]}}
+                <div>Born: {{author.born}}</div>
+                {%if author.died != None%}
+                    <div>Died: {{author.died}}</div>
                 {% endif %}
 
-                {% if "education" in book["authors"][0] %}
-                   <div>Education: {{book["authors"][0]["education"]}}</div> 
+                {% if author.education != None%}
+                   <div>Education: {{author.education}}</div>
                 {% endif %}
 
-                {% if "nationality" in book["authors"][0] %}
-                    <div>Nationality: {{book["authors"][0]["nationality"]}}</div>
+                {% if author.nationality != None %}
+                    <div>Nationality: {{author.nationality}}</div>
                 {% endif %}
                 <div class="h4">Description:</div>
-                <p>{{book["authors"][0]["description"]}}</p>
-
+                <p>{{author.description}}</p>
 
 
                 <div class="h4">Famous Works</div>
                 <div class="rel-books-wrapper">
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-4">
-                            {% if related == [] %}
+                            {% if author.books_written == [] %}
                                 <p>There are no related books.</p>
                             {% else %}
-                                {% for cover in related %}
-                                    <div class="col-sm-4">
-                                        <img src="{{cover}}" class="book-image img-responsive">
+                                {% for book in author.books_written[:3] %}
+                                    <div class="col-md-4">
+                                        <a href="{{request.url_root}}books/{{book.title}}">
+                                            <img src="{{book.image_url}}" class="book-image img-responsive">
+                                        </a>
                                     </div>
                                 {% endfor %}
                             {% endif %}
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
         </div>
-
     </div>
 
     <!-- Optional JavaScript -->

@@ -43,11 +43,13 @@
             <div class="col-md-3 row_div">
                 <span>{{book.title}}</span>
                 <div class="img-container">
-                    <img src="{{book.image}}" alt="" class="img-responsive book-image">
+                    <img src="{{book.image_url}}" alt="" class="img-responsive book-image">
                 </div>
-                <div>Author:<a href="{{request.url_root}}"></a></div>
-                <div>Publisher:<a href="{{request.url_root}}"></a></div>
-                <div>Date Published: {{book.date}} </div>
+                <div>Author:<a href="{{request.url_root}}authors/{{book.written_by[0].name}}">{{book.written_by[0].name}}</a></div>
+                <div>Publisher:<a href="{{request.url_root}}publishers/{{book.published_by[0].name}}">{{book.published_by[0].name}}</a></div>
+                <div>Date Published: {{book.date_published}} </div>
+                <div>ISBN: {{book.isbn}}</div>
+                <div>Google ID: {{book.google_id}}</div>
             </div>
             <div class="col-md-8 row_div">
                 <div class="h4">Description:</div>
@@ -56,12 +58,14 @@
                 <div class="rel-books-wrapper">
                     <div class="container">
                         <div class="row">
-                            {% if related == [] %}
+                            {% if book.written_by[0].books_written == [] %}
                                 <p>There are no related books.</p>
                             {% else %}
-                                {% for cover in related %}
+                                {% for book_info in book.written_by[0].books_written %}
                                     <div class="col-sm-4">
-                                        <img src="{{cover}}" class="book-image img-responsive">
+                                        <a href="{{request.url_root}}books/{{book_info.title}}">
+                                            <img src="{{book_info.image_url}}" class="book-image img-responsive">
+                                        </a>
                                     </div>
                                 {% endfor %}
                             {% endif %}
