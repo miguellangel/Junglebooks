@@ -1,3 +1,137 @@
+commit 73d24696c17d50e926e926ca5226aee6e88724d6
+Merge: 396504e 77ae5ec
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Fri Apr 5 19:49:46 2019 -0500
+
+    fixing merge errors
+
+commit 396504e4b888e97cb96195a66fbfffd60070d5ed
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Fri Apr 5 19:46:58 2019 -0500
+
+    fully implemented links and dynamic content
+
+commit 77ae5ec967f5185dc3b73fac25e64bf404319f90
+Merge: 4274a81 c4e2546
+Author: Sommer <schavez@utexas.edu>
+Date:   Fri Apr 5 17:14:11 2019 -0500
+
+    Merge branch 'frontend' of gitlab.com:Sommer_C/cs329e-ibd into frontend
+    
+    newer branch.
+
+commit 4274a8134b4f1ebf01bd99d7aa898e17a3334ed6
+Merge: afcdd06 c1fb047
+Author: Sommer <schavez@utexas.edu>
+Date:   Fri Apr 5 17:13:51 2019 -0500
+
+    committing
+
+commit c4e2546163f344d0018ed017f6cd0e817efef0fa
+Merge: e2838a9 c1fb047
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Fri Apr 5 16:49:20 2019 -0500
+
+    fixing merge errors
+
+commit e2838a9fa6d109d80cb1bfcd007f1e1ed0cf71fe
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Fri Apr 5 16:47:35 2019 -0500
+
+    implemented relationship tables for some books
+
+commit afcdd068d42e3f37574f7c61f195076a4607795c
+Author: Sommer <schavez@utexas.edu>
+Date:   Thu Apr 4 22:02:47 2019 -0500
+
+    Fixing links through database.
+
+commit c1fb047b7f2c2663aa8b77f5f7d1d432b1b9e692
+Author: musty-j <40575672+musty-j@users.noreply.github.com>
+Date:   Thu Apr 4 21:59:00 2019 -0500
+
+    adding models.html
+
+commit 73f1ed8e0c501e1dd69b9505ce706d2dd47347a4
+Author: Reethika <reethikarao@utexas.edu>
+Date:   Thu Apr 4 21:30:49 2019 -0500
+
+    unittests on stats page
+
+commit 8dd41c0495f5a98853c4be196f2fa92580da8f59
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Fri Apr 5 01:53:41 2019 +0000
+
+    Upload New File
+
+commit 9ac1bf986913ab7097e36ceeefee4a1d9e661dd1
+Author: Reethika <reethikarao@utexas.edu>
+Date:   Thu Apr 4 20:43:21 2019 -0500
+
+    updated stats
+
+commit 536a45592ca8d0b24c118867c15950dd9e90c389
+Merge: b3d6c80 7bb2f27
+Author: Sommer <schavez@utexas.edu>
+Date:   Thu Apr 4 19:49:20 2019 -0500
+
+    fixed unmerged errors, access to database
+
+commit b3d6c8000fe66b151b3e91ba329a55ea5aa267a3
+Author: Sommer <schavez@utexas.edu>
+Date:   Thu Apr 4 19:41:10 2019 -0500
+
+    Getting access to database
+
+commit 7bb2f27dde47efbc23c47af93334674694b446a9
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Thu Apr 4 19:38:29 2019 -0500
+
+    fix broken links errors
+
+commit 1cccd4077702fa382952c413d129ebf060622ad0
+Merge: dd01a71 f0c6997
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Thu Apr 4 19:10:50 2019 -0500
+
+    concluding merges
+
+commit dd01a715bf95871b2a859dd070bb3a9d62c7e26b
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Thu Apr 4 19:07:32 2019 -0500
+
+    pushing so others can see changes
+
+commit 66f216a109db0834c581ba398e819b965a4fa59a
+Merge: f0c6997 ab4407e
+Author: Sommer <schavez@utexas.edu>
+Date:   Thu Apr 4 18:39:18 2019 -0500
+
+    Merge branch 'jose' of gitlab.com:Sommer_C/cs329e-ibd into frontend
+    
+    need their files.
+
+commit f0c6997427675a62771e961b7a67988d5c77eb2c
+Author: Sommer <schavez@utexas.edu>
+Date:   Thu Apr 4 18:13:43 2019 -0500
+
+    Made author and publisher pages dynamic
+
+commit 396228cb0969e7a99a3bba7027f8ddd9187e7bc4
+Merge: 9e90fd0 ab4407e
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Wed Apr 3 21:00:25 2019 -0500
+
+    Merge branch 'jose' of gitlab.com:Sommer_C/cs329e-ibd into frontend
+    
+    "need to work with what they got"
+
+commit 9e90fd03037fb41470b28c82774983d02bea7293
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Wed Apr 3 19:03:58 2019 -0500
+
+    implemented dynamic links to authors
+
 commit e712949d81f6a57fb4c7df9df130c04bfc2fb6ad
 Author: Miguel <arriaga.miguel123@gmail.com>
 Date:   Tue Apr 2 20:07:17 2019 -0500
@@ -16,11 +150,86 @@ Date:   Tue Apr 2 16:28:58 2019 -0500
 
     experimenting with pagination
 
+commit ab4407e18e7e524ca4d623431f85557248e65be0
+Author: musty-j <40575672+musty-j@users.noreply.github.com>
+Date:   Tue Apr 2 00:22:38 2019 -0500
+
+    fixed indentation error, commenting. DB tested w/success
+
+commit 1e76c7f2835c86a78c81976d3b856fa8d97b5a9b
+Author: musty-j <40575672+musty-j@users.noreply.github.com>
+Date:   Tue Apr 2 00:00:31 2019 -0500
+
+    resolved errors. create database good to go
+
+commit 79cbbedaacc8110d3e10d69bc13727d0e07ec4db
+Author: musty-j <40575672+musty-j@users.noreply.github.com>
+Date:   Mon Apr 1 22:40:05 2019 -0500
+
+    creating database. issues with creating book.json
+
 commit 88b83ff057708b4d7806200b59b3e47a8cf7fcf1
 Author: Miguel <arriaga.miguel123@gmail.com>
 Date:   Mon Apr 1 18:19:42 2019 -0500
 
     implement JINJA + Flask dynamic variables
+
+commit 080dcda524d1ada6c61f4ebc8bb38210122109b7
+Author: musty-j <40575672+musty-j@users.noreply.github.com>
+Date:   Sat Mar 30 17:04:37 2019 -0500
+
+    fixing keyword errors. still doesn't create_db
+
+commit d8f7127481f7e3d4d556e01fb01b23f2135984fb
+Author: musty-j <40575672+musty-j@users.noreply.github.com>
+Date:   Sat Mar 30 15:42:22 2019 -0500
+
+    add requirement.txt
+
+commit 66c622e0e0d4a82ebeae933176e6d563d1208a2e
+Author: Jose Rosales <joserosales@wireless-10-145-21-135.public.utexas.edu>
+Date:   Sat Mar 30 15:26:53 2019 -0500
+
+    Fixed error on models.py
+
+commit 950bc4517b8ec5b0f9c15c928d2e687dee6cdb1d
+Author: Jose Rosales <joserosales@wireless-10-145-21-135.public.utexas.edu>
+Date:   Sat Mar 30 15:21:14 2019 -0500
+
+    Edited models.py
+
+commit 2591627c74a27510739dbfc6b8b1b38e010328bc
+Merge: c04517e 8d793af
+Author: Jose Rosales <joserosales@wireless-10-145-21-135.public.utexas.edu>
+Date:   Sat Mar 30 15:18:32 2019 -0500
+
+    Merge branch 'mjolaade' of https://gitlab.com/Sommer_C/cs329e-ibd into jose
+
+commit c04517efddbdbc04ea5e1d28ee03e144e24d8913
+Author: Jose Rosales <joserosales@wireless-10-145-21-135.public.utexas.edu>
+Date:   Sat Mar 30 15:18:05 2019 -0500
+
+    Created books.json
+
+commit 8d793afdbf291bb28db93b40514c90e19294f154
+Author: musty-j <40575672+musty-j@users.noreply.github.com>
+Date:   Sat Mar 30 14:29:06 2019 -0500
+
+    created models.py
+
+commit 837266a86c063d23134495abc7c8389309f823a7
+Merge: b9b79ea 0ae359e
+Author: Jose Rosales <joserosales@wireless-10-145-21-135.public.utexas.edu>
+Date:   Sat Mar 30 13:27:55 2019 -0500
+
+    Merge branch 'backend' of https://gitlab.com/Sommer_C/cs329e-ibd into jose
+
+commit 84718137b135a1ca99848cd759448ac14bd54112
+Merge: 2099abf 7d8a396
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Sat Mar 30 13:19:28 2019 -0500
+
+    incorporating latest changes from dev
 
 commit 7d8a39681cb11ec3277eb9192394197a59726370
 Author: Miguel <arriaga.miguel123@gmail.com>
@@ -28,11 +237,42 @@ Date:   Sat Mar 30 13:17:01 2019 -0500
 
     fixed error 404 for book2
 
+commit 0ae359e18ba8f35a6b02ded70a8d130ec8ca36a1
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Fri Mar 29 21:46:01 2019 +0000
+
+    Delete main3.py
+
+commit 5db1e1b67b6e4d364e6f52c19ffc42b976e9c66b
+Author: Reethika <reethikarao@utexas.edu>
+Date:   Fri Mar 29 16:44:30 2019 -0500
+
+    book2.html, main3.py
+
+commit 2099abf1493e2e679b0b24fdf32ccc2b1ff43dee
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Fri Mar 29 16:39:39 2019 -0500
+
+    fix unmerged error in main.py
+
+commit b9b79ea4b573ca09c194e7bcdb60886da47a52b2
+Author: Jose Rosales <joserosales@wireless-10-147-220-254.public.utexas.edu>
+Date:   Fri Mar 29 16:28:09 2019 -0500
+
+    Edited book.py
+
 commit bbfe25a59761cc91e558e99726be9461dec8bfc0
 Author: Jose Rosales <joserosales@wireless-10-147-220-254.public.utexas.edu>
 Date:   Fri Mar 29 16:22:53 2019 -0500
 
     Created Book.py
+
+commit 6a852170a937ae633f5703fa21da56cad01dd0f4
+Merge: f1ee761 c06d1d8
+Author: Miguel <arriaga.miguel123@gmail.com>
+Date:   Fri Mar 29 16:18:50 2019 -0500
+
+    merge before database integration
 
 commit c06d1d8dbebdb2ac5600d622a75a3d9b613d6b1f
 Merge: db9d881 002465a
@@ -64,6 +304,12 @@ Author: Miguel <arriaga.miguel123@gmail.com>
 Date:   Thu Mar 28 16:22:46 2019 -0500
 
     revert some accidentally deleted items in css
+
+commit f1ee761e6c9918d36a2f30f0d0fb3e8f776e5331
+Author: Reethika Thakkalapally <reethikarao@utexas.edu>
+Date:   Mon Mar 25 02:57:46 2019 +0000
+
+    Update about.html
 
 commit 3e54cf1edb9fc040a5115d658089717d308e7d91
 Author: musty-j <40575672+musty-j@users.noreply.github.com>
