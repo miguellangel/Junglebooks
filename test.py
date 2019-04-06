@@ -81,7 +81,5 @@ class DBTestCases(unittest.TestCase):
 
         self.assertEqual(str(r.isbn),"9781781100257")
 
-
-
 if __name__ == '__main__':
     unittest.main()

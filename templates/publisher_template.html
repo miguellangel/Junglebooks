@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Local CSS -->
     <link type="text/css" rel="stylesheet" href="./../static/css/index.css">
-    <title>cs329e-idb:about</title>
+    <title>cs329e-idb:{{publisher.name}}</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for('about')}}">About</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item dropdown">
                     <a class="nav-link" href="{{url_for('statistics')}}">Statistics</a>
                 </li>
             </ul>
@@ -38,67 +38,76 @@
             </form>
         </div>
     </nav>
-    <div class="container table-responsive">
-        <h2>Statistics</h2>
+    <div class="container">
+        <div class="row" id="book-row-container">
+            <div class="col-md-3 row_div">
+                <h4>{{publisher.name}}</h4>
+                <div class="img-container">
+                    <img src= "{{publisher.image_url}}" alt="" class="img-responsive book-image">
+                </div>
+                {% if publisher.owner %}
+                    <div>Owned by: {{publisher.owner}}</div>
+                {% endif %}
+                <div>Authors:
+                    <ul>
+                        {% for author in publisher.authors_signed %}
+                            <li><a href= "{{request.url_root}}authors/{{author.name}}">{{author.name}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
 
-        <table class="table table-hover">
-            <thead>
-                <th>Name</th>
-                <th>Commits</th>
-                <th>Issues</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Jose Rosales</td>
-                    <td>10</td>
-                    <td>9</td>
-                </tr>
-                <tr>
-                    <td>Miguel Arriaga</td>
-                    <td>12</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>Mustapha Jolaade</td>
-                    <td>10</td>
-                    <td>14</td>
-                </tr>
-                <tr>
-                    <td>Reethika Thakkalapally</td>
-                    <td>8</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Sommer Chavez</td>
-                    <td>9</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Total</td>
-                    <td>49</td>
-                    <td>32</td>
-                </tr>
-            </tbody>
-        </table>
 
-	<h2>Unit Tests</h2>
-    	<img src="./../static/Images/unittests.png" alt="unittests" style="width:70%">
+                <div>Publisher Website:<a href="{{publisher.website}}"> {{publisher.name}}</a> </div>
+                <div><a href="{{publisher.wikipedia_url}}">More about this publisher here!</a></div>
+
+
+
+            </div>
+            <div class="col-md-8 row_div">
+                {% if publisher.founded%}
+                    <div class="h5">Founded: {{publisher.founded}}</div>
+                {% endif %}
+
+                {% if publisher.parent_company %}
+                    <div class="h5">Owner: {{publisher.parent_company}}</div>
+                {% endif %}
+
+                <div class="h4">Description: </div>
+                <p>{{publisher.description}}</p>
+
+
+
+                <div class="h4">Famous Publishings</div>
+                <div class="rel-books-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            {% if publisher.books_published == [] %}
+                                <p>No publishings found.</p>
+                            {% else %}
+                                {% for book in publisher.books_published %}
+                                    <div class="col-md-4">
+                                        <a href="{{request.url_root}}books/{{book.name}}">
+                                            <img src="{{book.image_url}}" class="book-image img-responsive">
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
 
     </div>
-
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- Optional JavaScript -->
-    <script src="/static/Javascript/index.js" charset="utf-8"></script>
-
-
 </body>
 
 </html>
