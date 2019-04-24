@@ -2,9 +2,14 @@
 # main3.py
 # creating first flask application
 #-----------------------------------------
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request, redirect, Response
 from models import app, db, Book, Author, Publisher
+from create_db import create_books
+import sys, random, json
+
+db.drop_all()
+db.create_all()
+create_books()
 
 @app.route('/publishers/<string:requested_publisher>')
 def publishers(requested_publisher):
@@ -32,9 +37,7 @@ def books(requested_book):
         return "Book does not exist"
 @app.route('/')
 def index():
-    # limit the number of covers per page
     book_db = Book.query.all()
-    books_per_page = 6
     return render_template("index.html", books = book_db)
 
 @app.route('/about')
@@ -44,6 +47,33 @@ def about():
 @app.route('/statistics')
 def statistics():
 	return render_template("statistics.html")
+
+@app.route('/models')
+def models():
+    book_db = Book.query.all()
+    names = ['Google ID', 'Book Title', 'ISBN','Publication Date', 'Publishers', 'Authors']
+    book_attrs = ['google_id', 'title', 'isbn','publication_date', 'published_by', 'written_by']
+
+    return render_template("models.html", book_db = book_db, names = names, book_attrs = book_attrs)
+
+@app.route('/search')
+def search():
+    query = worker()
+    results = Book.query.whoosh_search(query).all()
+    return render_template('search.html', results = results)
+
+@app.route('/receiver', methods = ['POST'])
+def worker():
+    # read json + reply
+    data = request.get_json()
+    result = ''
+
+    for item in data:
+		# loop over every row
+        result += str(item['make']) + '\n'
+
+    return result
+
 
 if __name__ == "__main__":
     app.run(debug=True)
