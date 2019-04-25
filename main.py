@@ -2,7 +2,7 @@
 # main3.py
 # creating first flask application
 #-----------------------------------------
-from flask import Flask, render_template, request, redirect, Response
+from flask import Flask, render_template, request, redirect, Response, url_for
 from models import app, db, Book, Author, Publisher
 from create_db import create_books
 import sys, random, json
@@ -56,25 +56,20 @@ def models():
 
     return render_template("models.html", book_db = book_db, names = names, book_attrs = book_attrs)
 
-@app.route('/search')
-def search():
-    query = worker()
+@app.route('/search/<query>')
+def search(query):
     results = Book.query.whoosh_search(query).all()
-    return render_template('search.html', results = results)
 
-@app.route('/receiver', methods = ['POST'])
-def worker():
-    # read json + reply
-    data = request.get_json()
-    result = ''
+    return render_template("search.html", results = results)
 
-    for item in data:
-		# loop over every row
-        result += str(item['make']) + '\n'
+@app.route('/process', methods=['POST'])
+def process():
+    query = request.form['query']
+    if query:
+        print(query)
+        return redirect(url_for('search', query = query))
 
-    return result
-
-
+# def main
 if __name__ == "__main__":
     app.run(debug=True)
 

@@ -42,7 +42,7 @@ class Book(db.Model):
 #Attributes include name, born, education, nationality, description, alma_mater, wiki_url, and image. These attributes are nullable
 class Author(db.Model):
     __tablename__ = 'author'
-    __searchable__ = ['name', 'description']
+    # __searchable__ = ['description']
 
     born = db.Column(db.String(), nullable = True)
     name = db.Column(db.String(80), primary_key= True)
@@ -57,12 +57,11 @@ class Author(db.Model):
     # relationships
     books_written = db.relationship('Book', secondary=book_rel, backref=db.backref('books_written', lazy='dynamic'))
     publisher = db.relationship('Publisher', secondary=book_rel, backref=db.backref('publisher', lazy='dynamic'))
-#wa.whoosh_index(app, Author)
 
 # The structure is same as table Book and Author.
 class Publisher(db.Model):
     __tablename__ = 'publisher'
-    __searchable__ = ['name', 'owner', 'parent_company']
+    # __searchable__ = ['owner', 'parent_company']
 
     wikipedia_url = db.Column(db.String(), nullable = True)
     name = db.Column(db.String(80), primary_key= True)
@@ -76,12 +75,10 @@ class Publisher(db.Model):
     # relationships
     books_published = db.relationship('Book', secondary=book_rel, backref=db.backref('books_published', lazy='dynamic'))
     authors_signed = db.relationship('Author', secondary=book_rel, backref=db.backref('authors_signed', lazy='dynamic'))
-#wa.whoosh_index(app, Publisher)
 
-#db.create_all()
 # End of models.py
 
 
-# wa.whoosh_index(app, Book)
+wa.whoosh_index(app, Book)
 # wa.whoosh_index(app, Publisher)
 # wa.whoosh_index(app, Author)
