@@ -1,5 +1,5 @@
 import sys, os, unittest
-from create_db import db, Book, Author, Publisher
+from create_db import db, Book, Author, Publisher, create_books
 db.drop_all()
 db.create_all()
 create_books()
