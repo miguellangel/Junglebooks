@@ -11,11 +11,11 @@
         <link type="text/css" rel="stylesheet" href="./../static/css/index.css">
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <title>cs329e-idb:search</title>
+        <title>Junglebooks - search</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg" id="nav-top">
-            <a class="navbar-brand" href="{{url_for('index')}}">iBDb</a>
+            <a class="navbar-brand" href="{{url_for('index')}}">Junglebooks</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{url_for('index')}}"> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url_for('about')}}">About</a>
@@ -43,9 +43,13 @@
         </nav>
         <div class="container">
             <h4>Search Results</h4>
+            {% if results == [] %}
+                <p>No results. Try again.</p>
+            {% endif %}
+
             {% for item in results %}
                 <div class="h5">
-                    <a href="{{request.url_root}}books/{{item.title}}">{{item.title}}</a>
+                    <a href="{{request.url_root}}books/{{item.title}}" style="font-family: 'Roboto',arial,sans-serif;">{{item.title}}</a>
                     <p>{{item.description[0:100]}}...</p>
                 </div>
             {% endfor %}

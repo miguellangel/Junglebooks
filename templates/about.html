@@ -11,12 +11,12 @@
     <!-- Local CSS -->
     <link type="text/css" rel="stylesheet" href="./../static/css/index.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <title>cs329e-idb:about</title>
+    <title>Junglebooks - about</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg" id="nav-top">
-        <a class="navbar-brand" href="{{url_for('index')}}">iBDb</a>
+        <a class="navbar-brand" href="{{url_for('index')}}">Junglebooks</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{url_for('index')}}"> <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for('about')}}">About</a>
@@ -43,24 +43,18 @@
         </div>
     </nav>
 
-    <div class="main content" id="about">
-        <h1 class="main content">About</h1>
-        <h3> Team: Group #20 </h3>
-    </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
+        <div class="main content" id="about">
+            <h1 class="main content">About</h1>
+            <h3> Team: Group #20 </h3>
+        </div>
+        <div class="row" style="text-align: center">
+            <div class="col-md-6">
                 <img src="./../static/Images/dog1.jpg" alt="Jose" style="width:70%">
                 <h3>Jose Rosales</h3>
                 <h5 class="main content">Economics</h5>
                 <p>Worked on Backend, Frontend and Deployment </p>
-            </div>
-            <div class="col-md-4">
-                <img src="./../static/Images/dog2.jpg" alt="Miguel" style="width:70%">
-                <h3>Miguel Arriaga</h3>
-                <h5 class="main content">Linguistics and Elements of Computing</h5>
-                <p>Worked on both Backend and Frontend</p>
             </div>
             <div class="col-md-4">
                 <img src="./../static/Images/dog3.jpeg" alt="Mustapha" style="width:70%">
@@ -69,11 +63,11 @@
                 <p>Worked on both Backend and Frontend</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="text-align: center">
             <div class="col-md-6">
-                <img src="./../static/Images/dog4.jpg" alt="Reethika" style="width:50%">
-                <h3>Reethika Thakkalapally</h3>
-                <h5 class="main content">Computational Biology</h5>
+                <img src="./../static/Images/dog2.jpg" alt="Miguel" style="width:70%">
+                <h3>Miguel Arriaga</h3>
+                <h5 class="main content">Linguistics and Elements of Computing</h5>
                 <p>Worked on both Backend and Frontend</p>
             </div>
             <div class="col-md-6">
@@ -89,7 +83,7 @@
 
         <h2>Statistics</h2>
 
-        <table class="table table-hover">
+        <table class="table table-hover sortable">
             <thead>
                 <th>Name</th>
                 <th>Commits</th>
@@ -98,23 +92,18 @@
             <tbody>
                 <tr>
                     <td>Jose Rosales</td>
-                    <td>10</td>
+                    <td>11</td>
                     <td>9</td>
                 </tr>
                 <tr>
                     <td>Miguel Arriaga</td>
-                    <td>12</td>
+                    <td>30</td>
                     <td>5</td>
                 </tr>
                 <tr>
                     <td>Mustapha Jolaade</td>
-                    <td>10</td>
+                    <td>11</td>
                     <td>14</td>
-                </tr>
-                <tr>
-                    <td>Reethika Thakkalapally</td>
-                    <td>8</td>
-                    <td>2</td>
                 </tr>
                 <tr>
                     <td>Sommer Chavez</td>
@@ -123,7 +112,7 @@
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td>49</td>
+                    <td>61</td>
                     <td>32</td>
                 </tr>
             </tbody>
@@ -149,6 +138,8 @@
 
         <!-- Optional JavaScript -->
         <script type="text/javascript" src="./../static/Javascript/index.js"></script>
+        <script src="../static/Javascript/sorttable.js"></script>
+
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -26,6 +26,15 @@ website:
 	FLASK_APP=main.py FLASK_DEBUG=1 $(PYTHON) -m flask run
 
 log:
-	git log > IDB2.log
+	git log > IDB3.log
 
-test: IDB2.log website
+pydoc:
+	$(PYDOC) -w models
+
+test-website:
+	$(PYTHON) test.py
+
+SHA:
+	git rev-parse HEAD
+
+test: IDB2.log pydoc test-website SHA 

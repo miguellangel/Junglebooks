@@ -68,6 +68,7 @@ def process():
     if query:
         print(query)
         return redirect(url_for('search', query = query))
+    return redirect(url_for('search', query = []))
 
 # def main
 if __name__ == "__main__":
