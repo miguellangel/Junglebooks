@@ -1,12 +1,10 @@
-import os
-import sys
-import unittest
-#from models import db, Book
+import sys, os, unittest
 from create_db import db, Book, Author, Publisher
-
+db.drop_all()
+db.create_all()
+create_books()
 
 class DBTestCases(unittest.TestCase):
-
 
     def test_source_insert_1(self):
         #test1
